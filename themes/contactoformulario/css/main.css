@@ -1,0 +1,370 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Work Sans", sans-serif;
+}
+
+/*-------------------------*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?siv7ug');
+  src:  url('../fonts/icomoon.eot?siv7ug#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?siv7ug') format('truetype'),
+    url('../fonts/icomoon.woff?siv7ug') format('woff'),
+    url('../fonts/icomoon.svg?siv7ug#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /*speak: never;*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail_outline:before {
+  content: "\e908";
+}
+.icon-phone_android:before {
+  content: "\e902";
+}
+.icon-comment:before {
+  content: "\e904";
+}
+.icon-mail_outline1:before {
+  content: "\e905";
+}
+.icon-send:before {
+  content: "\e901";
+}
+.icon-warning:before {
+  content: "\e900";
+}
+.icon-notice:before {
+  content: "\e900";
+}
+.icon-note:before {
+  content: "\e900";
+}
+.icon-user-o:before {
+  content: "\e909";
+}
+.icon-comment-o:before {
+  content: "\e906";
+}
+.icon-paper-plane-o:before {
+  content: "\e903";
+}
+.icon-send-o:before {
+  content: "\e903";
+}
+.icon-warning1:before {
+  content: "\ea07";
+}
+
+/*---------------------------------*/
+
+
+body{
+	background: url('../img/bg-01.jpg') no-repeat center center;
+	background-size: cover;
+}
+main{
+	width: 100%;
+	height: 100vh;
+}
+
+.header_main{
+	text-align: right;
+	padding: 20px;
+}
+.header_main ul{
+	display: flex;
+	justify-content: flex-end;
+    list-style: none;
+}
+.header_main ul li{
+	margin-left: 20px;
+}
+.header_main ul li:nth-child(1){
+	display: none;
+	margin-left: 0;
+}
+.header_main a{
+	text-decoration: none;
+	cursor: pointer;
+	font: 400 14px 'Work Sans';
+	color: #846add;
+	border: solid 1px #846add;
+	border-radius: 30px;
+	padding: 10px 25px;
+	background: white;
+	transition: all ease-in-out 0.2s;
+}
+.header_main a:hover{
+	background: #846add;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	background: rgba(132, 106, 221, 0.75);
+	backdrop-filter: blur(10px);
+    transform: scale(1);
+    animation: view_modal ease-in-out 0.3s;
+}
+.modal_main{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes view_modal{
+	0% {
+	    opacity: 0;
+	}
+
+	1% {
+	    opacity: 0;
+	    transform: scale(1.2);
+	}
+	50% {
+	    opacity: 1;
+	}
+	100% {
+	    opacity: 1;
+	}
+}
+
+
+.act{
+	display: block;
+}
+
+
+
+
+.form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.form_main{
+	position: relative;
+	width: 590px;
+	background: white;
+	border-radius: 7px;
+	
+}
+.form_main .close-modal{
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	margin-top: -50px;
+}
+.form_main .close-modal a{
+	display: block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-decoration: none;
+	cursor: pointer;
+	color: white;
+	font: 300 24px 'Work Sans';
+	transition: all ease-in-out 0.2s;
+	background: rgba(255, 255, 255, 0.0);
+}
+.form_main .close-modal a:hover{
+	background: rgba(255, 255, 255, 0.1);
+}
+.form_main .close-modal a:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 2px;
+	top: 20px;
+	left: 5px;
+	background: white;
+	transform: rotate(45deg);
+}
+.form_main .close-modal a:after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 2px;
+	top: 20px;
+	left: 5px;
+	background: white;
+	transform: rotate(-45deg);
+}
+
+.form_main .form_head{
+	position: relative;
+	height: 130px;
+	width: 100%;
+	background: url('../img/bg-02.jpg') no-repeat center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+.form_main .form_head:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(67, 67, 67, .6);
+}
+.form_main .form_head h1{
+	font: 500 34px 'Work Sans';
+	color: white;
+	z-index: 1;
+}
+.form_main .form_content{
+	padding: 50px;
+}
+.form_main .form_content input{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	padding: 25px 25px 25px 60px;
+	outline: 0;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	font: 400 14px 'Work Sans';
+	color: #846add;
+}
+.form_main .form_content input::placeholder, .form_main .form_content textarea::placeholder{
+	color: #ccc;
+	font: 300 14px 'Work Sans';
+}
+.form_content textarea{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	padding: 15px 25px 25px 60px;
+	outline: 0;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	font: 400 14px 'Work Sans';
+	color: #846add;
+	resize: none;
+}
+.form_main .form_content textarea{
+	min-height: 140px;
+}
+
+.form_main .form_content .box{
+	position: relative;
+	margin: 20px 0;
+	height: 100%;
+}
+.form_main .form_content .box i{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	margin-top: 15px;
+	margin-left: 25px;
+	font-size: 1.2rem;
+	color: #ccc;
+}
+
+
+.form_main .form_content .box_btn{
+	position: relative;
+	text-align: center;
+}
+
+.form_main .form_content .box_btn input{
+	width: 250px;
+	height: 50px;
+	background: #846add;
+	border: solid 1px #846add;
+	color: #fff;
+	border-radius: 25px;
+	transition: all ease-in-out 0.2s;
+	cursor: pointer;
+	box-shadow: 0 0 3px 0 #846add;
+	padding: 0;
+}
+
+.form_main .form_content .box_btn input:hover {
+    background: #FFF;
+    color: #846add;
+    box-shadow: 0 0 20px -5px #846add;
+}
+
+h2.msmEnviado {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 500px;
+    background: #fff;
+    border-radius: 7px;
+    color: #846add;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    padding-top: 45px;
+}
+
+h2.msmEnviado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 13px;
+    border-bottom: solid 4px #846add;
+    border-left: solid 4px #846add;
+    margin-top: 39px;
+    margin-left: calc(50% - 10px);
+    transform: rotate(-45deg);
+}
